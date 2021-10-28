@@ -1,0 +1,15 @@
+.task {
+  background-color: red;
+  text-align: center;
+  width: 600px;
+  height: 60px;
+  font-size: 40px;
+  /* padding-top: 5px; */
+  margin-left: 660px;
+  color: white;
+}
+
+.task.completed {
+  background-color: green;
+  text-decoration: line-through;
+}
