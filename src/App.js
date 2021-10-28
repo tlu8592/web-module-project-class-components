@@ -2,6 +2,8 @@ import React from 'react';
 import TodoForm from './components/TodoForm';
 import TodoList from './components/TodoList';
 
+import './style.css';
+
 class App extends React.Component {
   // you will need a place to store your state in this component.
   // design `App` to be the parent component of your application.
@@ -53,14 +55,14 @@ class App extends React.Component {
   render() {
     console.log(this.state);
     return (
-      <div>
+      <div className="app">
         <h1>Todo App</h1>
         <TodoForm handleAddTask={this.handleAddTask} />
         <TodoList 
           todos={this.state.todos} 
           handleToggleTask={this.handleToggleTask} 
         />
-        <button onClick={this.handleClearCompleted}>Clear Completed</button>
+        <button className="clear-button" onClick={this.handleClearCompleted}>Clear Completed</button>
       </div>
     );
   }
